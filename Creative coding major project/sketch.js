@@ -174,7 +174,7 @@ function draw() {
   
   //Translate the coordinate origin to the position of the tree
 		translate(300, 140)
-		// Tree trunk
+		
 		strokeWeight(3);
 		//line branches
 		let line1 = new lines(292, 590, 292, 338)
