@@ -8,7 +8,7 @@ let amountt = 37;
 let sizee = [25, 50, 100];
 let anglee = 0;
 let plusanglee = 0.025;
-let lengthh = 75;
+let lengthh = 100;
 let pluslengthh = 5;
 let changelengthh = 0;
 
@@ -99,7 +99,7 @@ function draw() {
 
 	push()
 // Translate the coordinate origin to the position of the tree
-	translate(300, 140)
+	translate(300, 120)
 	rectMode(CORNER)
 // Middle Rectangle
 	strokeWeight(3);
@@ -153,14 +153,14 @@ function draw() {
 
 
 	 // Draw the hook 
-	 strokeWeight(3);
+	 
 	fill(255, 222, 0);
 	linexx = bx + lengthh * cos(anglee);
-	lineyy = 100+ lengthh * sin(anglee);
-	line(bx, 100, linexx, lineyy);
-
+	lineyy = 75+ lengthh * sin(anglee);
+	line(bx, 75, linexx, lineyy);
+    strokeWeight(3);
 	fill(255, 222, 0)
-	circle(linexx, lineyy, 20);
+	circle(linexx, lineyy, 25);
 	fill(255, 222, 0)
 	if (anglee < 0) plusanglee = -plusanglee;
 	if (anglee > 3) plusanglee = -plusanglee;
@@ -173,7 +173,7 @@ function draw() {
 	push()
   
   //Translate the coordinate origin to the position of the tree
-		translate(300, 140)
+		translate(300, 120)
 		
 		strokeWeight(3);
 		//line branches
@@ -241,7 +241,7 @@ function draw() {
 
 		fg = false
          console.log(mk,"ppp")
-		if (mk>-1) {
+		if (mk>null) {
 			console.log(mk,"kkk")
 			goldd.splice(mk, 1);
 			mk = null
