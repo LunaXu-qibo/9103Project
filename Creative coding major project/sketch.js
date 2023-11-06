@@ -241,7 +241,7 @@ function draw() {
 
 		fg = false
          console.log(mk,"ppp")
-		if (mk>null) {
+		if (mk != null) {
 			console.log(mk,"kkk")
 			goldd.splice(mk, 1);
 			mk = null
