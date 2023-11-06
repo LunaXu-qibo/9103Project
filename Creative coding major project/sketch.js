@@ -245,6 +245,13 @@ function draw() {
 		if (keyCode === LEFT_ARROW) { bx -= 5 }
 		if (keyCode === RIGHT_ARROW) { bx += 5 }
 	}
+
+  if (scoree >= winn) { 
+    fill(255); 
+    textSize(50); 
+    textAlign(CENTER); 
+    text('Win!', width / 2, height / 2);
+  }
 }
  // Control the horizontal movement of the hook based on keyboard input
 function keyPressed() {
