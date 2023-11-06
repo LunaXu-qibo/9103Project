@@ -1,4 +1,4 @@
-// Initialize global variables
+// Initialize global variables of background
 let ranges;
 let seed = Math.random() * 200;
 let mySize;
@@ -9,6 +9,22 @@ let colorselet = [];
 let plus, margin;
 let filter1;
 let xCoor = 0;
+// Initialize global variables of game
+let playingg = true;
+let timerr = 0;
+let scoree = 0;
+let winn = 37;
+let goldd = [];
+let amountt = 37;
+let sizee = [25, 50, 100];
+let anglee = 0;
+let plusanglee = 0.025;
+let lengthh = 100;
+let pluslengthh = 5;
+let changelengthh = 0;
+
+let fg = false
+let mk = null
 
 function setup() {
   randomSeed(seed);
