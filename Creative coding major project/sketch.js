@@ -25,7 +25,7 @@ function setup() {
 	textFont('Georgia');
 	rectMode(CENTER);
 	ellipseMode(CENTER);
-  
+
 	// Create some initial apple objects
 	goldd[0] = new Apple(294, 330, 27, PI / 2, { ratio: 0.43, c1: color(12, 133, 88), c2: color(175, 67, 67) });
 	goldd[1] = new Apple(266, 335, 32, 3 * PI / 2, { ratio: 0.52, c1: color(12, 133, 88), c2: color(175, 67, 67) });
@@ -80,6 +80,8 @@ function draw() {
   background("#003153");
 	textAlign(LEFT);
 	textSize(25);
+
+  //set the timer
 	timerr = int(millis() / 1000);
 	text('Time: ' + timerr + ' sec', 60, 40);
 	scoree = amountt - goldd.length;
@@ -90,9 +92,7 @@ function draw() {
 
 
 	push()
-
-
-
+// Translate the coordinate origin to the position of the tree
 	translate(300, 120)
 	rectMode(CORNER)
 	// Middle Rectangle
