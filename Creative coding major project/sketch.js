@@ -22,7 +22,7 @@ let by;
 
 function setup() {
   createCanvas(1200, 800);
-	textFont('Georgia');
+	textFont('Arial');
 	rectMode(CENTER);
 	ellipseMode(CENTER);
 
@@ -77,15 +77,21 @@ function setup() {
 }
 
 function draw() {
-  background("#003153");
+  background(2, 90, 158);
 	textAlign(LEFT);
-	textSize(25);
+	textSize(15);
 
+	text('Use the left and right arrow keys to move the hook.', 30, 700);
+	text('Press the spacebar to start and stop the hook.', 30, 720);
+	text('Catch apples with the hook to score points!', 30, 740);
+  
+	line(0, 100, windowWidth, 100);
+	square(bx, 75, 50);
  // Set the timer
 	timerr = int(millis() / 1000);
-	text('Time: ' + timerr + ' sec', 60, 40);
+	text('Time: ' + timerr + ' sec', 30, 40);
 	scoree = amountt - goldd.length;
-	text('Score: ' + scoree + ' / ' + winn, 60, 80);
+	text('Score: ' + scoree + ' / ' + winn, 30, 60);
 	line(0, 100, windowWidth, 100);
 	square(bx, 75, 50);
 
@@ -148,14 +154,14 @@ function draw() {
 
 
 	 // Draw the hook
-	fill(0);
+	fill(255, 255, 0);
 	linexx = bx + lengthh * cos(anglee);
 	lineyy = 75 + lengthh * sin(anglee);
 	line(bx, 75, linexx, lineyy);
 
 	fill(255, 255, 0)
-	circle(linexx, lineyy, 25);
-	fill(0)
+	circle(linexx, lineyy, 20 );
+	fill(255, 255, 0)
 	if (anglee < 0) plusanglee = -plusanglee;
 	if (anglee > 3) plusanglee = -plusanglee;
 	anglee = anglee + plusanglee;
