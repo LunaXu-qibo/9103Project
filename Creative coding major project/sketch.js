@@ -20,11 +20,59 @@ let by;
 
 
 
-
-
 function setup() {
-  createCanvas(600, 800);
-  background("#003153");
+  createCanvas(1200, 800);
+	textFont('Georgia');
+	rectMode(CENTER);
+	ellipseMode(CENTER);
+	
+	goldd[0] = new Apple(294, 330, 27, PI / 2, { ratio: 0.43, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[1] = new Apple(266, 335, 32, 3 * PI / 2, { ratio: 0.52, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[2] = new Apple(234, 328, 36, PI / 2, { ratio: 0.40, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[3] = new Apple(189, 297, 73, PI / 30, { ratio: 0.55, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[4] = new Apple(184, 238, 46, 31 * PI / 30, { ratio: 0.55, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+
+	goldd[5] = new Apple(190, 203, 27, PI / 30, { ratio: 0.5, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[6] = new Apple(180, 174, 36, PI / 2, { ratio: 0.48, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[7] = new Apple(144, 160, 42, 0, { ratio: 0.48, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[8] = new Apple(135, 112, 54, PI, { ratio: 0.60, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[9] = new Apple(148, 60, 54, 0, { ratio: 0.55, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[10] = new Apple(311, 308, 29, 0, { ratio: 0.50, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[11] = new Apple(313, 272, 45, PI, { ratio: 0.48, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[12] = new Apple(285, 246, 33, PI / 2, { ratio: 0.46, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[13] = new Apple(261, 250, 22, 3 * PI / 2, { ratio: 0.46, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[14] = new Apple(269, 226, 20, 0, { ratio: 0.52, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[15] = new Apple(343, 250, 30, 3 * PI / 2, { ratio: 0.50, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+
+
+	goldd[16] = new Apple(350, 225, 23, 0, { ratio: 0.40, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[17] = new Apple(329, 337, 41, 3 * PI / 2, { ratio: 0.5, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[18] = new Apple(364, 332, 27, 3 * PI / 2, { ratio: 0.60, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[19] = new Apple(411, 292, 44, 41 * PI / 40, { ratio: 0.60, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[20] = new Apple(395, 328, 40, PI / 2, { ratio: 0.40, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[21] = new Apple(416, 254, 32, PI / 40, { ratio: 0.40, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[22] = new Apple(421, 210, 61, 41 * PI / 40, { ratio: 0.5, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[23] = new Apple(419, 167, 27, PI / 40, { ratio: 0.4, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[24] = new Apple(442, 162, 20, 8 * PI / 5, { ratio: 0.4, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[25] = new Apple(473, 169, 42, 3 * PI / 5, { ratio: 0.5, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[26] = new Apple(508, 176, 27, 8 * PI / 5, { ratio: 0.5, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[27] = new Apple(520, 151, 27, -PI / 40, { ratio: 0.5, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+
+
+	goldd[28] = new Apple(210, 580, 60, 29.85, { ratio: 0.6, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[29] = new Apple(255, 585, 30, 29.85, { ratio: 0.6, c1: color(175, 67, 67), c2: color(12, 133, 88) });
+	goldd[30] = new Apple(285, 570, 40, PI, { ratio: 0.6, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[31] = new Apple(332, 582, 60, radians(270), { ratio: 0.6, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[32] = new Apple(392, 582, 60, radians(270), { ratio: 0.6, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[33] = new Apple(298, 532, 40, radians(0), { ratio: 0.6, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[34] = new Apple(298, 490, 45, radians(0), { ratio: 0.6, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+	goldd[35] = new Apple(305, 429, 80, radians(360), { ratio: 0.6, c1: color(175, 67, 67), c2: color(12, 133, 88) });
+	goldd[36] = new Apple(300, 367, 44, radians(360), { ratio: 0.6, c1: color(12, 133, 88), c2: color(175, 67, 67) });
+
+	
+
+	bx = width / 2;
+	by = height / 2
 }
 
 function draw() {
