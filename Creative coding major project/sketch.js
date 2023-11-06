@@ -141,7 +141,7 @@ function draw() {
 	acr6.display();
 
 
-	//tree trunk
+	// Tree trunk
 	strokeWeight(3);
 
 	pop()
@@ -164,8 +164,9 @@ function draw() {
 
 	for (let i = 0; i < goldd.length; i++) {
 
-		push()
-    
+	push()
+  
+  //Translate the coordinate origin to the position of the tree
 		translate(300, 120)
 		//line branches
 		let line1 = new lines(292, 590, 292, 338)
@@ -212,11 +213,9 @@ function draw() {
 
 		pop()
 
+    
+    // If the hook catches an apple, update the apple's position
 		if (dist(goldd[i].x, goldd[i].y, linexx - 300, lineyy - 120) < goldd[i].d / 2) {
-
-
-
-
 			goldd[i].x = linexx - 300
 			goldd[i].y = lineyy - 120
 
