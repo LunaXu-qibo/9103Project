@@ -1,4 +1,4 @@
-// Initialize the varities
+// Initialize
 let playingg = true;
 let timerr = 0;
 let scoree = 0;
