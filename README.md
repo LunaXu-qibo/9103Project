@@ -3,7 +3,7 @@
 **Developed by Luna Xu**
 
 ## Description
-Apple Catcher is a simple and fun game where you control a hook to catch apples falling from a tree. Your goal is to collect a certain number of apples to win the game.
+Apple Catcher is a simple and fun game where you control a hook to catch apples from a tree. Your goal is to collect a certain number of apples to win the game.
 
 ## Features
 - Realistic apple-catching physics.
@@ -17,22 +17,19 @@ Apple Catcher is a simple and fun game where you control a hook to catch apples 
 3. Catch apples with the hook to score points.
 4. You win the game by reaching the target score.
 
-## Installation
-1. Download or clone the repository.
-2. Open the `index.html` file in a web browser to play the game.
+## Getting Started
+To run the game locally using [Visual Studio Code](https://code.visualstudio.com/) and [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer):
+
+1. Open your project folder in Visual Studio Code.
+2. Right-click on the `index.html` file.
+3. Select "Open with Live Server" to launch the game in your web browser.
 
 ## Screenshots
-![Game Screenshot 1](screenshot1.png)
-![Game Screenshot 2](screenshot2.png)
+![Game Screenshot 1](ss.png)
 
 ## Credits
 - Game developed by **Luna Xu**
-- Background music by [Artist Name]
-
-## License
-This project is licensed under the [License Name] - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Acknowledgments
-- Special thanks to [Name] for their contributions.
-- Inspiration from [Source of Inspiration].
-
+- Special thanks to my group members for their contributions.
+- Inspiration from [Anwar Jalal Shemza 'Apple Tree'].
