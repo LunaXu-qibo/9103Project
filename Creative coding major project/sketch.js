@@ -1,14 +1,13 @@
 // Initialize global variables
-var ranges;
+let ranges;
 let seed = Math.random() * 200;
-var mySize;
+let mySize;
 let str_wei = 0;
 let x_space;
 let color1, color2;
 let colorselet = [];
 let plus, margin;
 let filter1;
-
 let xCoor = 0;
 
 function setup() {
@@ -41,6 +40,7 @@ function generateBg() {
 
   noFill();
   push();
+
   // Loop to draw shapes
   for (let i = 0; i < ranges; i++) {
     strokeWeight(str_wei);
@@ -193,7 +193,7 @@ function draw() {
   apple28.display({ c1: color(12, 133, 88), c2: color(175, 67, 67) });
 
 
-  // Middle Rectangle
+  //Middle Rectangle
   strokeWeight(3);
   stroke(25,50,90);
   let middleRect = new Rect(95, 602, 417, 77, 19, 145, 99);
@@ -312,7 +312,7 @@ function draw() {
 
 }
 
-//line class for branch
+//class of branch
 class lines {
   constructor(x1, y1, x2, y2) {
     this.x1 = x1;
@@ -353,7 +353,7 @@ class Apple {
 
 }
 
-// Filter constructor   Code Inspiration Source.：https://p5js.org/reference/#/p5/filter
+//Filter constructor   Code Inspiration Source.：https://p5js.org/reference/#/p5/filter
 function makeFilter() {
   colorMode(HSB, 360, 100, 100, 100);
   drawingContext.shadowColor = color(0, 0, 5, 95);
@@ -368,7 +368,7 @@ function makeFilter() {
   overAllTexture.updatePixels();
 }
 
-// Function to draw an over pattern
+//Function to draw an over pattern
 function drawOverPattern() {
   push();
   translate(width / 2, height / 2);
@@ -389,7 +389,8 @@ function prop(x1, y1, x2, y2, k) {
   return [x3, y3];
 }
 
-//reference: 'Rainy day-3' (SamuelYAN,2023)  https://openprocessing.org/sketch/2019293 
+//reference: 'Rainy day-3' (SamuelYAN,2023)  https://openprocessing.org/sketch/2019293
+
 //Function to divide and draw triangles
 function divideOP(x1, y1, x2, y2, x3, y3, n) {
   if (n > 1) {
@@ -428,7 +429,7 @@ function makeTriangle(v1, v2, v3) {
   }
 }
 
-//Draw a rectangle
+//class of rect
 class Rect {
   constructor(x, y, w, h, r, g, b) {
     this.x = x;
@@ -445,7 +446,7 @@ class Rect {
   }
 }
 
-//Draw an arc
+//class of arc
 class Arc {
   constructor(x, y, w, h, start, stop, r, g, b, mode = PIE) {
     this.x = x;
