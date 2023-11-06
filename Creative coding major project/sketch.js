@@ -253,7 +253,7 @@ function keyPressed() {
 
 
 }
-
+// Reset the angle increment for the hook
 function startt() {
 	plusanglee = 0;
 	changelengthh = 1;
@@ -266,8 +266,6 @@ function returnn() {
 }
 
 function misss() {
-
-
 
 	plusanglee = 0;
 	changelengthh = 2;
