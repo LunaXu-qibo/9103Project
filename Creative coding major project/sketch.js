@@ -1,3 +1,27 @@
+// Initialize the varities
+let playingg = true;
+let timerr = 0;
+let scoree = 0;
+let winn = 37;
+let goldd = [];
+let amountt = 37;
+let sizee = [25, 50, 100];
+let anglee = 0;
+let plusanglee = 0.025;
+let lengthh = 100;
+let pluslengthh = 5;
+let changelengthh = 0;
+
+let fg = false
+let mk = null
+
+let bx;
+let by;
+
+
+
+
+
 function setup() {
   createCanvas(600, 800);
   background("#003153");
