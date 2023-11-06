@@ -81,10 +81,12 @@ function draw() {
 	textAlign(LEFT);
 	textSize(15);
 
-	text('Use the left and right arrow keys to move the hook.', 30, 700);
-	text('Press the spacebar to start and stop the hook.', 30, 720);
-	text('Catch apples with the hook to score points!', 30, 740);
-  
+	text('User Guidance', 140, 680);
+	text('Use the 【Left】 and 【Right】 arrow keys to move the hook.', 30, 700);
+	text('Press the 【Spacebar】 to start and stop the hook.', 30, 720);
+	text('Press 【Enter】 to reset the game.', 30, 740);
+	text('Catch apples with the hook to score points!', 30, 760);
+    
 	line(0, 100, windowWidth, 100);
 	square(bx, 75, 50);
  // Set the timer
