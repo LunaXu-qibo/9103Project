@@ -213,23 +213,19 @@ function draw() {
 
 		pop()
 
-    
+
     // If the hook catches an apple, update the apple's position
 		if (dist(goldd[i].x, goldd[i].y, linexx - 300, lineyy - 120) < goldd[i].d / 2) {
 			goldd[i].x = linexx - 300
 			goldd[i].y = lineyy - 120
-
 			returnn();
-
 			mk = i
-
 			console.log(i)
-
 		}
 
 	}
-	if (lengthh > 800) misss();
-
+	if (lengthh > 800) misss();// Hook length becomes too long, game over
+  // Reset the hook length to its initial state and restore the game state
 	if (lengthh < 100 && fg) {
 		plusanglee = 0.025;
 		lengthh = 150;
@@ -250,7 +246,7 @@ function draw() {
 		if (keyCode === RIGHT_ARROW) { bx += 5 }
 	}
 }
-
+ // Control the horizontal movement of the hook based on keyboard input
 function keyPressed() {
 	if (key === ' ') startt();
 	if (keyCode === ENTER) location.reload()
