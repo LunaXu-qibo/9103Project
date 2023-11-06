@@ -26,7 +26,7 @@ function setup() {
 	rectMode(CENTER);
 	ellipseMode(CENTER);
 
-	// Create some initial apple objects
+	// Interaction with apple
 	goldd[0] = new Apple(294, 330, 27, PI / 2, { ratio: 0.43, c1: color(12, 133, 88), c2: color(175, 67, 67) });
 	goldd[1] = new Apple(266, 335, 32, 3 * PI / 2, { ratio: 0.52, c1: color(12, 133, 88), c2: color(175, 67, 67) });
 	goldd[2] = new Apple(234, 328, 36, PI / 2, { ratio: 0.40, c1: color(12, 133, 88), c2: color(175, 67, 67) });
@@ -81,7 +81,7 @@ function draw() {
 	textAlign(LEFT);
 	textSize(25);
 
-  //set the timer
+ // Set the timer
 	timerr = int(millis() / 1000);
 	text('Time: ' + timerr + ' sec', 60, 40);
 	scoree = amountt - goldd.length;
@@ -95,13 +95,13 @@ function draw() {
 // Translate the coordinate origin to the position of the tree
 	translate(300, 120)
 	rectMode(CORNER)
-	// Middle Rectangle
+// Middle Rectangle
 	strokeWeight(3);
 	stroke(25, 50, 90);
 	let middleRect = new Rect(95, 602, 417, 77, 19, 145, 99);
 	middleRect.display();
 
-	//Soil
+// Soil
 	strokeWeight(3);
 	stroke(25, 50, 90);
 	let soil = new Rect(120, 590, 370, 77, 188, 168, 88);
@@ -121,7 +121,6 @@ function draw() {
 
 	let soil5 = new Rect(360, 590, 60, 77, 19, 145, 99);
 	soil5.display();
-
 
 	let acr1 = new Arc(150, 666, 60, 77, PI, 0, 12, 133, 88);
 	acr1.display();
@@ -145,12 +144,10 @@ function draw() {
 	//tree trunk
 	strokeWeight(3);
 
-
-
-
-
 	pop()
-	/////////////////////////
+
+
+	 // Draw the hook
 	fill(0);
 	linexx = bx + lengthh * cos(anglee);
 	lineyy = 75 + lengthh * sin(anglee);
@@ -168,6 +165,7 @@ function draw() {
 	for (let i = 0; i < goldd.length; i++) {
 
 		push()
+    
 		translate(300, 120)
 		//line branches
 		let line1 = new lines(292, 590, 292, 338)
