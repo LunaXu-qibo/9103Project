@@ -8,7 +8,7 @@ let amountt = 37;
 let sizee = [25, 50, 100];
 let anglee = 0;
 let plusanglee = 0.025;
-let lengthh = 100;
+let lengthh = 75;
 let pluslengthh = 5;
 let changelengthh = 0;
 
@@ -22,7 +22,7 @@ let by;
 
 function setup() {
   createCanvas(1200, 800);
-	textFont('Arial');
+	textFont('Helvetica Bold');
 	rectMode(CENTER);
 	ellipseMode(CENTER);
 
@@ -44,7 +44,6 @@ function setup() {
 	goldd[13] = new Apple(261, 250, 22, 3 * PI / 2, { ratio: 0.46, c1: color(12, 133, 88), c2: color(175, 67, 67) });
 	goldd[14] = new Apple(269, 226, 20, 0, { ratio: 0.52, c1: color(12, 133, 88), c2: color(175, 67, 67) });
 	goldd[15] = new Apple(343, 250, 30, 3 * PI / 2, { ratio: 0.50, c1: color(12, 133, 88), c2: color(175, 67, 67) });
-
 
 	goldd[16] = new Apple(350, 225, 23, 0, { ratio: 0.40, c1: color(12, 133, 88), c2: color(175, 67, 67) });
 	goldd[17] = new Apple(329, 337, 41, 3 * PI / 2, { ratio: 0.5, c1: color(12, 133, 88), c2: color(175, 67, 67) });
@@ -77,31 +76,30 @@ function setup() {
 }
 
 function draw() {
-  background(2, 90, 158);
+  background(70, 123 ,192);
 	textAlign(LEFT);
 	textSize(15);
-
-	text('User Guidance', 140, 680);
-	text('Use the 【Left】 and 【Right】 arrow keys to move the hook.', 30, 700);
-	text('Press the 【Spacebar】 to start and stop the hook.', 30, 720);
-	text('Press 【Enter】 to reset the game.', 30, 740);
+	text('COLLECT APPLES', 30, 40);
+	text('USER GUIDANCE', 30, 650);
+	text('This game is better played in full screen.', 30, 680);
+	text('Use【Left】and【Right】arrow to move the hook.', 30, 700);
+	text('Press【Spacebar】to throw the hook.', 30, 720);
+	text('Press【Enter】to reset the game.', 30, 740);
 	text('Catch apples with the hook to score points!', 30, 760);
     
 	line(0, 100, windowWidth, 100);
 	square(bx, 75, 50);
  // Set the timer
 	timerr = int(millis() / 1000);
-	text('Time: ' + timerr + ' sec', 30, 40);
+	text('Time: ' + timerr + ' sec', 30, 70);
 	scoree = amountt - goldd.length;
-	text('Score: ' + scoree + ' / ' + winn, 30, 60);
+	text('Score: ' + scoree + ' / ' + winn, 30, 90);
 	line(0, 100, windowWidth, 100);
 	square(bx, 75, 50);
 
-
-
 	push()
 // Translate the coordinate origin to the position of the tree
-	translate(300, 120)
+	translate(300, 140)
 	rectMode(CORNER)
 // Middle Rectangle
 	strokeWeight(3);
@@ -149,21 +147,21 @@ function draw() {
 	acr6.display();
 
 
-	// Tree trunk
-	strokeWeight(3);
+
 
 	pop()
 
 
-	 // Draw the hook
-	fill(255, 255, 0);
+	 // Draw the hook 
+	 strokeWeight(3);
+	fill(255, 222, 0);
 	linexx = bx + lengthh * cos(anglee);
-	lineyy = 75 + lengthh * sin(anglee);
-	line(bx, 75, linexx, lineyy);
+	lineyy = 100+ lengthh * sin(anglee);
+	line(bx, 100, linexx, lineyy);
 
-	fill(255, 255, 0)
-	circle(linexx, lineyy, 20 );
-	fill(255, 255, 0)
+	fill(255, 222, 0)
+	circle(linexx, lineyy, 20);
+	fill(255, 222, 0)
 	if (anglee < 0) plusanglee = -plusanglee;
 	if (anglee > 3) plusanglee = -plusanglee;
 	anglee = anglee + plusanglee;
@@ -175,7 +173,9 @@ function draw() {
 	push()
   
   //Translate the coordinate origin to the position of the tree
-		translate(300, 120)
+		translate(300, 140)
+		// Tree trunk
+		strokeWeight(3);
 		//line branches
 		let line1 = new lines(292, 590, 292, 338)
 		line1.display()
@@ -232,11 +232,11 @@ function draw() {
 		}
 
 	}
-	if (lengthh > 800) misss();// Hook length becomes too long, game over
+	if (lengthh > 800) misss();// Hook length becomes too long
   // Reset the hook length to its initial state and restore the game state
 	if (lengthh < 100 && fg) {
 		plusanglee = 0.025;
-		lengthh = 150;
+		lengthh = 100;
 		changelengthh = 0;
 
 		fg = false
@@ -258,10 +258,10 @@ function draw() {
     fill(255); 
     textSize(50); 
     textAlign(CENTER); 
-    text('Win!', width / 2, height / 2);
+    text('You Win the Game!', width / 2, height / 2);
   }
 }
- // Control the horizontal movement of the hook based on keyboard input
+ // Function to reset the game
 function keyPressed() {
 	if (key === ' ') startt();
 	if (keyCode === ENTER) location.reload()
